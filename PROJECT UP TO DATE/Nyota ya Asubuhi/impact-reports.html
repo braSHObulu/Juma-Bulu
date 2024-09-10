@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Reports</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .report-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .report-links a {
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+        }
+        .report-links a:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .back-link {
+            display: block;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .back-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Donor Dashboard Link -->
+    <a href="donor-dashboard.html" class="back-link">Back to Donor Dashboard</a>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="donor-dashboard.html">Donor Dashboard</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Impact Reports</h2>
+        <p>Here are the detailed reports on how your contributions are making a difference:</p>
+        <div class="report-links">
+            <a href="./admin/report_donations_overview.php" class="button">Donations Summary Report</a>
+            <a href="./admin/report_donations_by_date.php" class="button">Monthly Donations</a>
+            <a href="./admin/report_donations_by_donor.php" class="button">Top Donors</a>
+            <!-- <a href="report_sponsorships_summary.php">Sponsorships Summary Report</a>
+            <a href="report_sponsorships_by_date.php">Sponsorships by Date Report</a>
+            <a href="report_sponsorships_by_sponsor.php">Sponsorships by Sponsor Report</a> -->
+        </div>
+    </main>
+
+</body>
+</html>

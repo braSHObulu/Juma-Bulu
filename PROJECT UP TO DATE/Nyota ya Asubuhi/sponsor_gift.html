@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate a Gift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Donate a Gift</h1>
+        <form action="process-donation.php" method="post">
+            <label for="gift_name">Gift Name:</label><br>
+            <input type="text" id="gift_name" name="gift_name" required><br><br>
+            
+            <label for="gift_description">Gift Description:</label><br>
+            <textarea id="gift_description" name="gift_description" required></textarea><br><br>
+            
+            <input type="submit" value="Donate Gift" class="btn">
+        </form>
+    </div>
+</body>
+</html>

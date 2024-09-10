@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        .dashboard-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .dashboard-section {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .dashboard-section h3 {
+            margin-top: 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        form {
+            margin: 0;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="index.html#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sponsor-dashboard">
+            <h2>Welcome to the Sponsor Dashboard</h2>
+            <div class="dashboard-grid">
+                <!-- Existing Sections -->
+                <div class="dashboard-section">
+                    <h3>Make a Contribution</h3>
+                    <p>Support our programs by making a contribution.</p>
+                    <a href="sponsor-donate.html" class="button">Donate Now</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>View Sponsored Child Profile</h3>
+                    <a href="sponsored-child-profile.html" class="button">View Profile</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Receive Updates & Progress Reports</h3>
+                    <a href="progress-reports.html" class="button">View Reports</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Communicate and Send Gifts</h3>
+                    <a href="send-gifts.php" class="button">Send Gift</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Access Event Information</h3>
+                    <a href="event-info.html" class="button">View Events</a>
+                </div>
+
+                <!-- New Sections -->
+                <div class="dashboard-section">
+                    <h3>Sponsorship History</h3>
+                    <p>Review your past sponsorships and their impact.</p>
+                    <a href="sponsorship-history.html" class="button">View History</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Download Sponsorship Reports</h3>
+                    <p>Access detailed reports on the progress and outcomes of your sponsored projects.</p>
+                    <a href="sponsorship-reports.html" class="button">Download Reports</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Upcoming Events & Invitations</h3>
+                    <p>Stay informed about upcoming events and special invitations for sponsors.</p>
+                    <a href="upcoming-events.html" class="button">View Events</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Overview</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS specific to the Analytics Overview page */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1em 2em;
+            background: #3498db;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="view-reports.html">Reports</a></li>
+                <li><a href="index_analytics.html">Analytics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Analytics Overview</h2>
+        <!-- <p>Welcome to the analytics section. You can access various analytics reports from here:</p> -->
+        <div class="button-container">
+            <a href="analytics_total.php" class="button">Total Donations & Sponsorships</a>
+            <a href="analytics_donations_by_date.php" class="button">Donations by Date</a>
+            <a href="analytics_donations_by_donor.php" class="button">Donations by Donor</a>
+            <a href="analytics_sponsorships_by_date.php" class="button">Sponsorships by Date</a>
+            <a href="analytics_sponsorships_by_sponsor.php" class="button">Sponsorships by Sponsor</a>
+        </div>
+    </main>
+</body>
+</html>

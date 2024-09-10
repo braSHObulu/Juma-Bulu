@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Donations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for the donation page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table thead {
+            background-color: #333;
+            color: #fff;
+        }
+
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+
+        table tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"], form input[type="number"], form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="admin.html">Dashboard</a></li>
+                <li><a href="manage_donations.php">Manage Donations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Manage Donations</h2>
+        
+        <!-- Donation List Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Donor Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                include 'db_connect.php';
+
+                $sql = "SELECT * FROM donations ORDER BY donation_date DESC";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                                <td>" . $row["id"] . "</td>
+                                <td>" . $row["donor_name"] . "</td>
+                                <td>" . $row["amount"] . "</td>
+                                <td>" . $row["donation_date"] . "</td>
+                              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>No donations found</td></tr>";
+                }
+
+                $conn->close();
+                ?>
+            </tbody>
+        </table>
+
+        <!-- Form to Add New Donation -->
+        <h2>Add New Donation</h2>
+        <form action="add_donation.php" method="POST">
+            <div>
+                <label for="donor_name">Donor Name:</label>
+                <input type="text" id="donor_name" name="donor_name" required>
+            </div>
+            <div>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div>
+                <label for="donation_date">Date:</label>
+                <input type="date" id="donation_date" name="donation_date" required>
+            </div>
+            <button type="submit">Add Donation</button>
+        </form>
+    </main>
+</body>
+</html>

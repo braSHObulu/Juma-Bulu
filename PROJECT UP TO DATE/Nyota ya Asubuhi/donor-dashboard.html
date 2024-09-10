@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: block;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .back-link:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .dashboard-section {
+            flex: 1 1 calc(33% - 20px);
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-section h3 {
+            margin-top: 0;
+        }
+
+        .dashboard-section p {
+            margin: 10px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        form input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .social-media a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+                <li><a href="index.html#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Back to Dashboard Link -->
+    <a href="donor-dashboard.html" class="back-link">Back to Donor Dashboard</a>
+
+    <main>
+        <section id="donor-dashboard">
+            <h2>Welcome to the Donor Dashboard</h2>
+            <div class="dashboard-grid">
+                <!-- Existing Sections -->
+                <div class="dashboard-section">
+                    <h3>Make Donations</h3>
+                    <p>Here you can make your contributions to support our cause.</p>
+                    <a href="donate.php" class="button">Donate Now</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Access Impact Reports</h3>
+                    <p>View detailed reports on how your contributions are making a difference.</p>
+                    <a href="impact-reports.html" class="button">View Reports</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Receive Acknowledgements</h3>
+                    <p>Thank you for your support! Here are some acknowledgements from the team and beneficiaries.</p>
+                    <a href="acknowledgements.html" class="button">View Acknowledgements</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Subscribe to the Newsletter</h3>
+                    <p>Stay updated with our latest news and updates.</p>
+                    <form id="newsletter-form">
+                        <label for="newsletter-email">Email:</label>
+                        <input type="email" id="newsletter-email" name="newsletter-email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- New Sections -->
+                <div class="dashboard-section">
+                    <h3>Donation History</h3>
+                    <p>Review your past donations and the impact they've made.</p>
+                    <a href="donation-history.html" class="button">View History</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Personalized Thank You Messages</h3>
+                    <p>Read personalized thank you messages from the children and families you've supported.</p>
+                    <a href="thank-you-messages.html" class="button">View Messages</a>
+                </div>
+
+                <div class="dashboard-section">
+                    <h3>Participate in Fundraising Events</h3>
+                    <p>Join our fundraising events to contribute even more.</p>
+                    <a href="fundraising-events.html" class="button">View Events</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <p>Follow us on:</p>
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
